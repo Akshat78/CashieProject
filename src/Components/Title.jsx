@@ -1,27 +1,27 @@
-import React, {useState , useEffect}from "react";
-function Title(){
-    const [name , setName] = useState("Anurag");
-    const[title , setTitle] = useState("jha");
+import React, { useState, useEffect } from "react";
+function Title() {
+    const [name, setName] = useState("Akshat");
+    const [title, setTitle] = useState("Tyagi");
 
-useEffect(() => {
-    console.log("USE EFFECT CALLED....");
-}, [] );
-    
-const updateTitle = (e) =>{
-    setTitle(e.target.value);
-};
-const updateName = (e) =>{
-    setName(e.target.value);
-};
+    useEffect(() => {
+        console.log("USE EFFECT CALLED....");
+    }, []);
+
+    const updateTitle = (e) => {
+        setTitle(e.target.value);
+    };
+    const updateName = (e) => {
+        setName(e.target.value);
+    };
     return (
         <div>
-<h1>Name = {name}</h1>
-<h1>Title = {title}</h1>
-        <input onKeyUp= {updateTitle} type ="text" />
-        <input onKeyUp= {updateName} type ="text" />
+            <h1>Name = {name}</h1>
+            <h1>Title = {title}</h1>
+            <input onKeyUp={updateTitle} type="text" />
+            <input onKeyUp={updateName} type="text" />
 
-   </div> 
-    
+        </div>
+
     );
 }
 export default Title;
